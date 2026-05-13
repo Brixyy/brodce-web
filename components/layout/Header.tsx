@@ -98,21 +98,18 @@ export default function Header() {
       {/* Hlavní header */}
       <header
         className={cn(
-          "fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-out",
+          // Konstantní pill struktura — nemění se mezi states, jen barvy/blur (žádný flicker).
+          "fixed left-1/2 -translate-x-1/2 z-50 top-3 sm:top-4",
+          "w-[calc(100%-1.5rem)] sm:w-auto sm:min-w-[680px] lg:min-w-[920px] rounded-full",
+          "transition-[background-color,backdrop-filter,box-shadow] duration-500 ease-out",
           solid
-            ? "top-3 sm:top-4 w-[calc(100%-1.5rem)] sm:w-auto bg-white/75 backdrop-blur-xl backdrop-saturate-150 rounded-full shadow-[0_10px_30px_-12px_rgba(15,34,64,0.18),0_2px_8px_-4px_rgba(15,34,64,0.08)]"
-            : "top-0 w-full bg-transparent"
+            ? // Liquid glass — silnější blur + saturace, inset highlight, outer shadow s primary tóny
+              "bg-white/55 backdrop-blur-2xl backdrop-saturate-200 shadow-[0_10px_40px_-8px_rgba(15,34,64,0.22),inset_0_1px_0_0_rgba(255,255,255,0.7),inset_0_-1px_0_0_rgba(15,34,64,0.04)]"
+            : "bg-transparent"
         )}
         role="banner"
       >
-        <div
-          className={cn(
-            "transition-all duration-300 ease-out",
-            solid
-              ? "mx-auto px-5 sm:px-6"
-              : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-          )}
-        >
+        <div className="mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex items-center justify-between h-16 lg:h-18">
             {/* Logo */}
             <NavLink href="/#hero" className="flex items-center gap-3">
