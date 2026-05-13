@@ -127,7 +127,7 @@ export default function Header() {
         >
           <div className="flex items-center justify-between h-16 lg:h-18">
             {/* Logo */}
-            <NavLink href="/#hero" className="flex items-center gap-3">
+            <NavLink href="/" className="flex items-center gap-3">
               <div className="relative w-8 h-9 shrink-0">
                 <Image
                   src="/icons/brodce-erb.svg"
