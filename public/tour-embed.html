@@ -9,8 +9,9 @@
   <style>
     @-ms-viewport { width:device-width; }
     @media only screen and (min-device-width:800px) { html { overflow:hidden; } }
-    html { height: 100%; }
-    body { height: 100%; overflow: hidden; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #0F2240; }
+    html { height: 100%; background: transparent; }
+    /* Body transparent — Hero pod iframem ukáže fallback obrázek dokud krpano nenačte tiles */
+    body { height: 100%; overflow: hidden; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: transparent; }
     #pano { width: 100%; height: 100%; }
   </style>
 </head>
@@ -35,34 +36,36 @@
         // Skryje vrtulník (návrat na letecký pohled) — máme vlastní UI tlačítko.
         // Layery jsou v XML pojmenované av, av1..av4 (jeden na scénu).
         var HELI_NAMES = ["av", "av1", "av2", "av3", "av4"];
-        function hideHeli() {
+        function hideExtras() {
           for (var i = 0; i < HELI_NAMES.length; i++) {
             krpano.call(
               "set(layer[" + HELI_NAMES[i] + "].visible,false);" +
               "set(layer[" + HELI_NAMES[i] + "].enabled,false)"
             );
           }
+          // Skryje skin_title („Brodce - Letecký pohled" v lefttop rohu)
+          krpano.call("set(layer[skin_title].visible,false);set(layer[skin_title].enabled,false)");
         }
 
-        // 1) Speed + skryt vrtulník hned po načtení
+        // 1) Speed + skryt vrtulník + skin_title hned po načtení
         krpano.set("autorotate.speed", TARGET_SPEED);
-        hideHeli();
+        hideExtras();
 
         // 2) Aplikovat i při každém přepnutí scény (XML každé scény jinak resetuje speed=3.0
-        //    a každá scéna znova vytvoří heli layer)
+        //    a každá scéna znova vytvoří heli layer + skin_title)
         krpano.set("events[customspeed].keep", true);
-        var heliCalls = HELI_NAMES.map(function (n) {
+        var hideCalls = HELI_NAMES.map(function (n) {
           return "set(layer[" + n + "].visible,false);set(layer[" + n + "].enabled,false)";
-        }).join(";");
+        }).join(";") + ";set(layer[skin_title].visible,false);set(layer[skin_title].enabled,false)";
         krpano.set(
           "events[customspeed].onnewscene",
-          "set(autorotate.speed, " + TARGET_SPEED + ");" + heliCalls
+          "set(autorotate.speed, " + TARGET_SPEED + ");" + hideCalls
         );
 
         // 3) Bezpečnostní override po krátké pauze — některé tour XML aplikují hodnotu opožděně
         setTimeout(function () {
           krpano.set("autorotate.speed", TARGET_SPEED);
-          hideHeli();
+          hideExtras();
         }, 800);
       },
     });

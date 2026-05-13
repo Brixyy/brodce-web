@@ -99,7 +99,9 @@ export default function Header() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          solid ? "bg-white shadow-md" : "bg-transparent"
+          solid
+            ? "bg-white/70 backdrop-blur-xl backdrop-saturate-150 border-b border-white/30 shadow-[0_1px_0_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)]"
+            : "bg-transparent"
         )}
         role="banner"
       >

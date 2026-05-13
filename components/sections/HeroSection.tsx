@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { ChevronDown, MapPin, CalendarDays, Clock, ArrowRight, Move, X, Plane } from "lucide-react"
 import { MUNICIPALITY } from "@/data/municipality"
@@ -10,6 +11,10 @@ import { EVENTS } from "@/data/events"
 // ale aplikuje autorotate.speed = 1.4 (-53 %) po onready a při každé změně scény.
 const TOUR_URL = "/tour-embed.html"
 const HOME_SCENE = "scene_65251" // Letecký pohled (default scéna v tour.xml)
+// Poster — letecký pohled na Brodce (Wikimedia, 5184×2876). Visuálně koresponduje s úvodní scénou
+// krpano prohlídky („Letecký pohled"). Zobrazen pod průhledným iframem dokud krpano nenačte tiles.
+const POSTER_IMAGE =
+  "https://upload.wikimedia.org/wikipedia/commons/0/0c/Brodce_letecky.JPG"
 
 type KrpanoWindow = Window & {
   krpano_get?: (cmd: string) => string | number | boolean | null
@@ -86,14 +91,16 @@ export default function HeroSection() {
   return (
     <section id="hero" className="relative h-screen min-h-[600px] overflow-hidden">
       {/* Virtual tour iframe — interactive background */}
-      <div
-        className="absolute inset-0 bg-dark-navy"
-        style={{
-          // jemný gradient místo fallback obrázku — žádný blik při načítání
-          backgroundImage:
-            "radial-gradient(ellipse at 30% 30%, rgba(46,106,168,0.45) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(26,63,107,0.6) 0%, transparent 60%)",
-        }}
-      >
+      <div className="absolute inset-0 bg-dark-navy">
+        {/* Poster — letecký pohled, viditelný dokud krpano nenačte tiles (iframe je transparent) */}
+        <Image
+          src={POSTER_IMAGE}
+          alt="Letecký pohled na Brodce"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <iframe
           ref={iframeRef}
           src={TOUR_URL}
