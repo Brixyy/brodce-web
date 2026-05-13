@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code workspace (lokální IDE konfigurace)
+.claude/
+
+# misc
+test-*.jpg
+test-*.png
