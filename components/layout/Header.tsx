@@ -98,14 +98,21 @@ export default function Header() {
       {/* Hlavní header */}
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          "fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-out",
           solid
-            ? "bg-white/70 backdrop-blur-xl backdrop-saturate-150 border-b border-white/30 shadow-[0_1px_0_rgba(0,0,0,0.04),0_8px_24px_-12px_rgba(0,0,0,0.12)]"
-            : "bg-transparent"
+            ? "top-3 sm:top-4 w-[calc(100%-1.5rem)] sm:w-auto bg-white/75 backdrop-blur-xl backdrop-saturate-150 rounded-full shadow-[0_10px_30px_-12px_rgba(15,34,64,0.18),0_2px_8px_-4px_rgba(15,34,64,0.08)]"
+            : "top-0 w-full bg-transparent"
         )}
         role="banner"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          className={cn(
+            "transition-all duration-300 ease-out",
+            solid
+              ? "mx-auto px-5 sm:px-6"
+              : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          )}
+        >
           <div className="flex items-center justify-between h-16 lg:h-18">
             {/* Logo */}
             <NavLink href="/#hero" className="flex items-center gap-3">
