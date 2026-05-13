@@ -97,19 +97,34 @@ export default function Header() {
     <>
       {/* Hlavní header */}
       <header
-        className={cn(
-          // Konstantní pill struktura — nemění se mezi states, jen barvy/blur (žádný flicker).
-          "fixed left-1/2 -translate-x-1/2 z-50 top-3 sm:top-4",
-          "w-[calc(100%-1.5rem)] sm:w-auto sm:min-w-[680px] lg:min-w-[920px] rounded-full",
-          "transition-[background-color,backdrop-filter,box-shadow] duration-500 ease-out",
-          solid
-            ? // Liquid glass — silnější blur + saturace, inset highlight, outer shadow s primary tóny
-              "bg-white/55 backdrop-blur-2xl backdrop-saturate-200 shadow-[0_10px_40px_-8px_rgba(15,34,64,0.22),inset_0_1px_0_0_rgba(255,255,255,0.7),inset_0_-1px_0_0_rgba(15,34,64,0.04)]"
-            : "bg-transparent"
-        )}
+        className="fixed left-1/2 -translate-x-1/2 z-50 w-full"
+        style={{
+          top: solid ? "1rem" : "0",
+          maxWidth: solid ? "min(960px, calc(100% - 1.5rem))" : "none",
+          borderRadius: solid ? "9999px" : "0",
+          transition: "top 400ms cubic-bezier(0.22,0.61,0.36,1), max-width 400ms cubic-bezier(0.22,0.61,0.36,1), border-radius 300ms ease-out",
+        }}
         role="banner"
       >
-        <div className="mx-auto px-6 sm:px-8 lg:px-10">
+        {/* Liquid glass vrstva — fade in po scrollu, žádný flicker (jen opacity transition) */}
+        <div
+          aria-hidden="true"
+          className={cn(
+            "absolute inset-0 rounded-[inherit] transition-opacity duration-500 ease-out pointer-events-none",
+            "bg-white/55 backdrop-blur-2xl backdrop-saturate-200",
+            "shadow-[0_10px_40px_-8px_rgba(15,34,64,0.22),inset_0_1px_0_0_rgba(255,255,255,0.7),inset_0_-1px_0_0_rgba(15,34,64,0.04)]",
+            solid ? "opacity-100" : "opacity-0"
+          )}
+        />
+
+        <div
+          className={cn(
+            "relative mx-auto transition-[padding,max-width] duration-400 ease-out",
+            solid
+              ? "px-6 sm:px-8"
+              : "max-w-7xl px-4 sm:px-6 lg:px-8"
+          )}
+        >
           <div className="flex items-center justify-between h-16 lg:h-18">
             {/* Logo */}
             <NavLink href="/#hero" className="flex items-center gap-3">
@@ -200,10 +215,11 @@ export default function Header() {
               <a
                 href="tel:+420326312204"
                 className={cn(
-                  "hidden sm:flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-colors",
+                  "items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-all duration-300",
+                  // Telefon viditelný jen v default (full-width) stavu; po scrollu se schová
                   solid
-                    ? "text-primary bg-primary/5 hover:bg-primary/10"
-                    : "text-white/90 hover:text-white hover:bg-white/10"
+                    ? "hidden"
+                    : "hidden sm:flex text-white/90 hover:text-white hover:bg-white/10"
                 )}
               >
                 <Phone size={13} />
