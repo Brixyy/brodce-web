@@ -35,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="cs" className={`${inter.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+    <html lang="cs" className={`${inter.variable} ${playfair.variable} overflow-x-clip`}>
+      <body className="overflow-x-clip">{children}</body>
     </html>
   )
 }

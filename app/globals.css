@@ -95,7 +95,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   background: var(--color-stone-50);
@@ -103,6 +103,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  /* Zabraňuje horizontálnímu scrollu na mobilu — FadeInView "right" animace dočasně posunuje
+     elementy o translate-x-8 (32px) z pravé strany; bez tohoto by mobile viewport mohl rolovat. */
+  overflow-x: hidden;
 }
 
 /* Subtle paper grain — global background texture */
