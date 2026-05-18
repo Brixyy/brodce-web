@@ -131,8 +131,8 @@ export default function AktualityPage() {
 
             <FadeInView delay={400} className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-100 text-sm text-blue-700">
               <strong>Tip:</strong> Chcete přidat akci do kalendáře? Kontaktujte obecní úřad na{" "}
-              <a href="mailto:ou@brodce.cz" className="underline hover:no-underline">ou@brodce.cz</a>{" "}
-              nebo na tel. +420 326 312 204.
+              <a href="mailto:podatelna@brodce.cloud" className="underline hover:no-underline">podatelna@brodce.cloud</a>{" "}
+              nebo na tel. +420 326 000 100.
             </FadeInView>
           </section>
 

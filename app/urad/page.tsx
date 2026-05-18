@@ -40,7 +40,7 @@ const EGOV_SERVICES = [
   {
     icon: Inbox,
     title: "Datová schránka",
-    description: "ID schránky: 2zvbp7e · Podání DS mají stejnou právní váhu jako listinné podání.",
+    description: "ID schránky: demob01 · Podání DS mají stejnou právní váhu jako listinné podání.",
     href: "https://www.mojedatovaschranka.cz",
   },
   {
@@ -255,15 +255,15 @@ export default function UradPage() {
                     <h3 className="font-semibold text-stone-900 text-sm mb-2">Podatelna / pokladna</h3>
                     <ul className="space-y-1.5">
                       <li>
-                        <a href="tel:+420326312204" className="flex items-center gap-2 text-sm text-stone-600 hover:text-primary transition-colors">
+                        <a href="tel:+420326000100" className="flex items-center gap-2 text-sm text-stone-600 hover:text-primary transition-colors">
                           <Phone size={13} className="text-stone-400" />
-                          +420 326 312 204
+                          +420 326 000 100
                         </a>
                       </li>
                       <li>
-                        <a href="mailto:podatelna@brodce.cz" className="flex items-center gap-2 text-sm text-stone-600 hover:text-primary transition-colors">
+                        <a href="mailto:podatelna@brodce.cloud" className="flex items-center gap-2 text-sm text-stone-600 hover:text-primary transition-colors">
                           <Mail size={13} className="text-stone-400" />
-                          podatelna@brodce.cz
+                          podatelna@brodce.cloud
                         </a>
                       </li>
                     </ul>
@@ -495,7 +495,7 @@ export default function UradPage() {
                 <h2 id="formulare-heading" className="font-semibold text-xl text-stone-900">Formuláře a žádosti</h2>
               </div>
             </FadeInView>
-            <p className="text-sm text-stone-500 mb-5">Ke stažení ve formátu PDF. Vyplněný formulář doručte osobně na podatelnu nebo zasílejte datovou schránkou (<strong className="text-stone-700">2zvbp7e</strong>).</p>
+            <p className="text-sm text-stone-500 mb-5">Ke stažení ve formátu PDF. Vyplněný formulář doručte osobně na podatelnu nebo zasílejte datovou schránkou (<strong className="text-stone-700">demob01</strong>).</p>
             <div className="grid sm:grid-cols-2 gap-3">
               {FORMULARE.map((f, i) => (
                 <FadeInView key={f.id} delay={i * 30}>
@@ -649,15 +649,15 @@ export default function UradPage() {
                     <ul className="space-y-3">
                       <li className="flex items-center gap-3 text-sm text-stone-600">
                         <Mail size={14} className="text-primary shrink-0" />
-                        <a href="mailto:podatelna@brodce.cz" className="hover:text-primary transition-colors">podatelna@brodce.cz</a>
+                        <a href="mailto:podatelna@brodce.cloud" className="hover:text-primary transition-colors">podatelna@brodce.cloud</a>
                       </li>
                       <li className="flex items-center gap-3 text-sm text-stone-600">
                         <Phone size={14} className="text-primary shrink-0" />
-                        <a href="tel:+420326312204" className="hover:text-primary transition-colors">+420 326 312 204</a>
+                        <a href="tel:+420326000100" className="hover:text-primary transition-colors">+420 326 000 100</a>
                       </li>
                       <li className="flex items-center gap-3 text-sm text-stone-600">
                         <Inbox size={14} className="text-primary shrink-0" />
-                        <span>Datová schránka: <strong className="font-mono text-stone-800">2zvbp7e</strong></span>
+                        <span>Datová schránka: <strong className="font-mono text-stone-800">demob01</strong></span>
                       </li>
                     </ul>
                   </div>

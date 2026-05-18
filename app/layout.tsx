@@ -16,14 +16,14 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Brodce – Městys v srdci Pojizeří",
-    template: "%s | Brodce",
+    default: "Brodce – náš domov | Vize moderního webu městyse",
+    template: "%s | Brodce – náš domov",
   },
   description:
-    "Oficiální web městyse Brodce. Aktuality, úřední deska, akce a informace pro občany.",
-  keywords: ["Brodce", "městys", "Pojizeří", "Mladá Boleslav", "Středočeský kraj"],
+    "Vizuální návrh moderního webu městyse Brodce — volební kampaň uskupení Brodce – náš domov. Toto není oficiální web obce, ten najdete na www.brodce.cz.",
+  keywords: ["Brodce", "Brodce náš domov", "volby", "Pojizeří", "Mladá Boleslav"],
   openGraph: {
-    siteName: "Brodce",
+    siteName: "Brodce – náš domov",
     locale: "cs_CZ",
     type: "website",
   },

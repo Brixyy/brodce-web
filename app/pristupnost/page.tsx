@@ -16,8 +16,9 @@ export default function PristupnostPage() {
 
           <div className="prose prose-stone max-w-none text-stone-600 space-y-4">
             <p>
-              Městys Brodce se zavazuje k přístupnosti svého webu v souladu se zákonem č. 99/2019 Sb.
-              o přístupnosti internetových stránek a mobilních aplikací.
+              Uskupení „Brodce – náš domov“ se snaží, aby byl tento web přístupný co
+              nejširšímu okruhu návštěvníků. Jako vzor jsme zvolili normu EN 301 549
+              (WCAG 2.1 AA), kterou používají i weby veřejné správy.
             </p>
 
             <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Stav souladu</h2>
@@ -37,9 +38,7 @@ export default function PristupnostPage() {
               Pokud narazíte na bariéru v přístupu k obsahu, kontaktujte nás:
             </p>
             <ul className="list-none space-y-1">
-              <li>E-mail: <a href="mailto:podatelna@brodce.cz" className="text-primary underline">podatelna@brodce.cz</a></li>
-              <li>Telefon: +420 326 312 204</li>
-              <li>Datová schránka: 2zvbp7e</li>
+              <li>E-mail: <a href="mailto:info@brodce.cloud" className="text-primary underline">info@brodce.cloud</a></li>
             </ul>
             <p>Na vaši zprávu odpovíme do 30 pracovních dnů.</p>
 

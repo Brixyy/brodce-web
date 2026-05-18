@@ -25,7 +25,7 @@ export default function AboutSection() {
           <FadeInView direction="left" className="relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=22939&sizeForce=0"
+                src="/images/gallery/sokolovna.jpg"
                 alt="Sokolovna Brodce"
                 fill
                 className="object-cover"

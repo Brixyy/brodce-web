@@ -111,7 +111,7 @@ export default function OObciPage() {
               <FadeInView direction="left">
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                   <Image
-                    src="https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=37570&sizeForce=0"
+                    src="/images/gallery/jizera.jpg"
                     alt="Příroda v okolí Brodce"
                     fill className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -214,7 +214,7 @@ export default function OObciPage() {
                   </div>
                   <h3 className="font-serif text-lg font-bold text-stone-900 mb-2">Knihovna Brodce</h3>
                   <p className="text-sm text-stone-600 leading-relaxed mb-4">
-                    Neprofesionální knihovna zřizovaná městysem, evidovaná pod číslem 3883 u Ministerstva kultury ČR. Knihovnice Šárka Košková.
+                    Neprofesionální knihovna zřizovaná městysem, evidovaná pod číslem 3883 u Ministerstva kultury ČR. Knihovnice Jana Procházková.
                   </p>
                   <div className="space-y-1 text-xs text-stone-500">
                     <p>📍 Dobrovická 34, 294 73 Brodce</p>
@@ -251,7 +251,7 @@ export default function OObciPage() {
                 <div className="group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:shadow-md transition-all flex flex-col h-full">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src="https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=14315&sizeForce=0"
+                      src="/images/gallery/skola.jpg"
                       alt="Masarykova základní škola Brodce"
                       fill className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 1024px) 100vw, 50vw"
@@ -265,12 +265,12 @@ export default function OObciPage() {
                     <h3 className="font-serif text-xl font-bold text-stone-900 mb-1">Základní škola</h3>
                     <p className="text-xs text-stone-400 mb-3">9 ročníků · 11 tříd · 259 žáků (2025/26)</p>
                     <p className="text-sm text-stone-600 leading-relaxed mb-4">
-                      Plně organizovaná škola s 1. i 2. stupněm — každý stupeň má vlastní budovu v areálu. Součástí je školní družina a jídelna. Ředitel: <strong className="text-stone-700">Mgr. Bc. Nenčo Jordanov</strong>.
+                      Plně organizovaná škola s 1. i 2. stupněm — každý stupeň má vlastní budovu v areálu. Součástí je školní družina a jídelna. Ředitel: <strong className="text-stone-700">Mgr. Bc. Jan Svoboda</strong>.
                     </p>
                     <div className="space-y-1 text-xs text-stone-500 mb-5">
                       <p>📍 Rudé armády 300, 294 73 Brodce</p>
-                      <p>📞 <a href="tel:+420326312233" className="hover:text-primary transition-colors">326 312 233</a></p>
-                      <p>📧 <a href="mailto:skola@zsbrodce.cz" className="hover:text-primary transition-colors">skola@zsbrodce.cz</a></p>
+                      <p>📞 <a href="tel:+420326000233" className="hover:text-primary transition-colors">326 000 233</a></p>
+                      <p>📧 <a href="mailto:skola@brodce.cloud" className="hover:text-primary transition-colors">skola@brodce.cloud</a></p>
                     </div>
                     <a
                       href="https://www.zsbrodce.cz/zakladni-skola"
@@ -288,7 +288,7 @@ export default function OObciPage() {
                 <div className="group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:shadow-md transition-all flex flex-col h-full">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src="https://www.zsbrodce.cz/img/bg-header.png"
+                      src="/images/hero/skola.jpg"
                       alt="Mateřská škola Brodce"
                       fill className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 1024px) 100vw, 50vw"
@@ -306,8 +306,8 @@ export default function OObciPage() {
                     </p>
                     <div className="space-y-1 text-xs text-stone-500 mb-5">
                       <p>📍 Rudé armády 300, 294 73 Brodce (areál školy)</p>
-                      <p>📞 <a href="tel:+420326312001" className="hover:text-primary transition-colors">326 312 001</a></p>
-                      <p>📧 <a href="mailto:bahnikova@zsbrodce.cz" className="hover:text-primary transition-colors">bahnikova@zsbrodce.cz</a></p>
+                      <p>📞 <a href="tel:+420326000001" className="hover:text-primary transition-colors">326 000 001</a></p>
+                      <p>📧 <a href="mailto:ms@brodce.cloud" className="hover:text-primary transition-colors">ms@brodce.cloud</a></p>
                     </div>
                     <a
                       href="https://www.zsbrodce.cz/materska-skola"
@@ -331,11 +331,11 @@ export default function OObciPage() {
                   Školní jídelna
                 </div>
                 <span className="text-stone-400 text-xs">v areálu školy</span>
-                <a href="tel:+420326312000" className="text-stone-500 hover:text-primary transition-colors">
-                  326 312 000
+                <a href="tel:+420326000000" className="text-stone-500 hover:text-primary transition-colors">
+                  326 000 000
                 </a>
-                <a href="mailto:jidelna@zsbrodce.cz" className="text-stone-500 hover:text-primary transition-colors">
-                  jidelna@zsbrodce.cz
+                <a href="mailto:jidelna@brodce.cloud" className="text-stone-500 hover:text-primary transition-colors">
+                  jidelna@brodce.cloud
                 </a>
                 <a
                   href="https://www.zsbrodce.cz/skolni-jidelna"

@@ -21,7 +21,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     category: "Akce",
     publishedAt: "2026-05-01",
     image:
-      "https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=27787&datum=6%2F13%2F2022+11%3A38%3A24+AM",
+      "/images/gallery/den-mestyse-02.jpg",
     imageAlt: "Den městyse Brodce — slavnosti na návsi",
     featured: true,
     readingMinutes: 3,
@@ -37,7 +37,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     category: "Škola",
     publishedAt: "2026-04-22",
     image:
-      "https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=14315&sizeForce=0",
+      "/images/news/skola.jpg",
     imageAlt: "Základní a mateřská škola Brodce",
     featured: false,
     readingMinutes: 2,
@@ -54,7 +54,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     category: "Akce",
     publishedAt: "2026-04-30",
     image:
-      "https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=37990&sizeForce=0",
+      "/images/news/paleni-2026.jpg",
     imageAlt: "Pálení čarodějnic Brodce 2026",
     featured: false,
     readingMinutes: 2,
@@ -70,7 +70,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     category: "Kultura",
     publishedAt: "2026-04-15",
     image:
-      "https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=37300&sizeForce=0",
+      "/images/gallery/urad.jpg",
     imageAlt: "Knihovna Brodce",
     featured: false,
     readingMinutes: 2,
@@ -85,7 +85,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     category: "Úřední deska",
     publishedAt: "2026-05-10",
     image:
-      "https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=22935&sizeForce=0",
+      "/images/gallery/jizera.jpg",
     imageAlt: "Budova úřadu městyse Brodce",
     featured: false,
     readingMinutes: 1,
@@ -100,7 +100,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     category: "Sport",
     publishedAt: "2026-03-08",
     image:
-      "https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=22939&sizeForce=0",
+      "/images/news/sokolovna.jpg",
     imageAlt: "Sokolovna Brodce",
     featured: false,
     readingMinutes: 2,

@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Phone, Mail, MapPin, Inbox, ExternalLink } from "lucide-react"
 import { MUNICIPALITY } from "@/data/municipality"
 
@@ -13,31 +12,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Identita */}
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-4 mb-5">
-              <div className="relative w-14 h-14 shrink-0 bg-white rounded-full flex items-center justify-center shadow-md ring-1 ring-white/20">
-                <div className="relative w-9 h-10">
-                  <Image
-                    src="/icons/brodce-erb.svg"
-                    alt="Erb městyse Brodce"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-              <div>
-                <p className="font-serif text-xl font-bold leading-tight">Brodce</p>
-                <p className="text-white/45 text-[10px] uppercase tracking-[0.2em]">
-                  Městys od roku 1130
-                </p>
-              </div>
+            <div className="mb-5">
+              <p className="font-serif text-xl font-bold leading-tight">
+                Brodce – náš domov
+              </p>
+              <p className="text-white/45 text-[10px] uppercase tracking-[0.2em]">
+                Volební kampaň · vize nového webu
+              </p>
             </div>
             <p className="text-white/65 text-sm leading-relaxed mb-5 max-w-sm">
-              Malá obec s velkou historií v srdci Pojizeří. Oficiální stránky úřadu městyse Brodce.
+              Ukázka, jak by mohl vypadat moderní web městyse Brodce. Vizuální
+              návrh připravený volebním uskupením „Brodce – náš domov“.
             </p>
-            <div className="flex flex-wrap gap-x-5 gap-y-1 text-xs text-white/40">
-              <span>IČO: {MUNICIPALITY.ico}</span>
-              <span>DIČ: CZ{MUNICIPALITY.ico}</span>
-            </div>
+            <p className="text-xs text-white/40 max-w-sm leading-relaxed">
+              Není to oficiální web obce. Uvedené osoby, kontakty a dokumenty
+              jsou ilustrativní a smyšlené.
+            </p>
           </div>
 
           {/* Kontakt */}
@@ -126,11 +116,34 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Disclaimer – neoficiální web */}
+      <div className="border-t border-white/10 bg-amber-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <p className="text-xs sm:text-[13px] text-white/75 leading-relaxed">
+            <strong className="text-white">
+              Toto není oficiální web městyse Brodce.
+            </strong>{" "}
+            Jde o vizuální návrh vytvořený v rámci volební kampaně uskupení
+            „Brodce – náš domov“. Oficiální web obce najdete na{" "}
+            <a
+              href="https://www.brodce.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-white"
+            >
+              www.brodce.cz
+            </a>
+            . Jména osob, kontakty, dokumenty a aktuality uvedené na tomto webu
+            jsou ilustrativní a smyšlené.
+          </p>
+        </div>
+      </div>
+
       {/* Spodní lišta – zákonné povinnosti */}
       <div className="border-t border-white/10" style={{ background: "#132948" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-white/35">
-            <span>© 2026 Městys Brodce</span>
+            <span>© 2026 volební uskupení Brodce – náš domov</span>
             <nav aria-label="Právní dokumenty" className="flex flex-wrap gap-x-5 gap-y-1">
               <Link href="/pristupnost" className="hover:text-white/70 transition-colors">
                 Prohlášení o přístupnosti

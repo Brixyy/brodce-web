@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X, Phone } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -128,14 +127,6 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 lg:h-18">
             {/* Logo */}
             <NavLink href="/" className="flex items-center gap-3">
-              <div className="relative w-8 h-9 shrink-0">
-                <Image
-                  src="/icons/brodce-erb.svg"
-                  alt="Erb Brodce"
-                  fill
-                  className="object-contain"
-                />
-              </div>
               <div className="flex flex-col leading-tight">
                 <span
                   className={cn(
@@ -143,7 +134,7 @@ export default function Header() {
                     solid ? "text-primary" : "text-white"
                   )}
                 >
-                  Brodce
+                  Brodce – náš domov
                 </span>
                 <span
                   className={cn(
@@ -151,7 +142,7 @@ export default function Header() {
                     solid ? "text-stone-400" : "text-white/60"
                   )}
                 >
-                  Oficiální stránky městyse
+                  Volební kampaň · vize nového webu
                 </span>
               </div>
             </NavLink>
@@ -213,7 +204,7 @@ export default function Header() {
             {/* Telefon + hamburger */}
             <div className="flex items-center gap-3">
               <a
-                href="tel:+420326312204"
+                href="tel:+420326000100"
                 className={cn(
                   "items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-lg transition-all duration-300",
                   // Telefon viditelný jen v default (full-width) stavu; po scrollu se schová
@@ -223,7 +214,7 @@ export default function Header() {
                 )}
               >
                 <Phone size={13} />
-                <span className="hidden xl:inline">+420 326 312 204</span>
+                <span className="hidden xl:inline">+420 326 000 100</span>
               </a>
               <button
                 onClick={() => setOpen(true)}
@@ -253,8 +244,8 @@ export default function Header() {
           <div className="absolute top-0 right-0 bottom-0 w-80 bg-white shadow-2xl flex flex-col overflow-y-auto">
             <div className="flex items-center justify-between p-5 border-b border-stone-100 sticky top-0 bg-white">
               <div>
-                <span className="font-serif text-xl font-bold text-primary block">Brodce</span>
-                <span className="text-xs text-stone-400">Oficiální stránky městyse</span>
+                <span className="font-serif text-xl font-bold text-primary block">Brodce – náš domov</span>
+                <span className="text-xs text-stone-400">Volební kampaň · vize webu</span>
               </div>
               <button
                 onClick={() => setOpen(false)}
@@ -294,13 +285,13 @@ export default function Header() {
             </nav>
 
             <div className="mt-auto p-5 border-t border-stone-100 space-y-3">
-              <a href="tel:+420326312204" className="flex items-center gap-3 text-sm text-stone-600">
+              <a href="tel:+420326000100" className="flex items-center gap-3 text-sm text-stone-600">
                 <Phone size={15} className="text-primary" />
-                +420 326 312 204
+                +420 326 000 100
               </a>
               <div className="text-xs text-stone-400 space-y-0.5">
-                <p>IČO: 00237078 · DS: 2zvbp7e</p>
-                <p>Brodce č.p. 48, 294 73</p>
+                <p>Volební uskupení Brodce – náš domov</p>
+                <p>Ilustrativní návrh, nikoli oficiální web</p>
               </div>
             </div>
           </div>

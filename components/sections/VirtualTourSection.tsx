@@ -8,8 +8,7 @@ import FadeInView from "@/components/animations/FadeInView"
 import BackgroundAurora from "@/components/ui/BackgroundAurora"
 
 const TOUR_URL = "https://brodce.cz/html/prohlidka/"
-const PREVIEW_IMAGE =
-  "https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=22935&sizeForce=0"
+const PREVIEW_IMAGE = "/images/gallery/urad.jpg"
 
 export default function VirtualTourSection() {
   const [active, setActive] = useState(false)

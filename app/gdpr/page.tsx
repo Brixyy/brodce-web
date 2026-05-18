@@ -14,27 +14,42 @@ export default function GdprPage() {
             Ochrana osobních údajů (GDPR)
           </h1>
           <div className="prose prose-stone max-w-none text-stone-600 space-y-4">
-            <p>
-              Správcem osobních údajů je <strong>Městys Brodce</strong>, Brodce č.p. 48, 294 73 Brodce,
-              IČO: 00237078.
+            <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+              Tento web <strong>není oficiálním webem městyse Brodce</strong>. Jde
+              o vizuální návrh vytvořený v rámci volební kampaně uskupení „Brodce –
+              náš domov“. Oficiální web obce najdete na{" "}
+              <a href="https://www.brodce.cz" target="_blank" rel="noopener noreferrer" className="underline">
+                www.brodce.cz
+              </a>.
             </p>
-            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Pověřenec pro ochranu osobních údajů</h2>
+            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Provozovatel webu</h2>
             <p>
-              Kontakt na DPO: <a href="mailto:dpo@brodce.cz" className="text-primary underline">dpo@brodce.cz</a>
+              Provozovatelem a správcem tohoto webu je volební uskupení{" "}
+              <strong>„Brodce – náš domov“</strong>. Web slouží jako prezentace
+              kandidátů a jejich vize moderního webu obce.
             </p>
-            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Účel zpracování</h2>
+            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Jaké údaje zpracováváme</h2>
             <p>
-              Osobní údaje zpracováváme výhradně za účelem plnění zákonných povinností obce
-              (zákon č. 128/2000 Sb. a navazující předpisy), komunikace s občany a poskytování
-              služeb veřejné správy.
+              Web je čistě prezentační. <strong>Neobsahuje žádné kontaktní
+              formuláře ani přihlašování</strong> a <strong>nesbírá od návštěvníků
+              žádné osobní údaje</strong>. Nepoužíváme analytické ani reklamní
+              nástroje a nepředáváme žádná data třetím stranám.
             </p>
-            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Vaše práva</h2>
+            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Osoby uvedené na webu</h2>
             <p>
-              Máte právo na přístup k osobním údajům, jejich opravu, výmaz, omezení zpracování
-              a právo podat stížnost u Úřadu pro ochranu osobních údajů (uoou.cz).
+              Jména zastupitelů, úředníků a další osobní údaje zobrazené v ukázkovém
+              obsahu jsou <strong>smyšlená a ilustrativní</strong>. Neodpovídají
+              konkrétním žijícím osobám a slouží pouze k předvedení podoby webu.
+            </p>
+            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Vaše práva a kontakt</h2>
+            <p>
+              Pokud máte k tomuto webu dotaz nebo námitku, napište nám na{" "}
+              <a href="mailto:info@brodce.cloud" className="text-primary underline">info@brodce.cloud</a>.
+              V souvislosti se zpracováním osobních údajů máte právo podat stížnost
+              u Úřadu pro ochranu osobních údajů (uoou.cz).
             </p>
             <p className="text-xs text-stone-400 mt-8">
-              Aktualizováno: 13. května 2026
+              Aktualizováno: 18. května 2026
             </p>
           </div>
         </div>
