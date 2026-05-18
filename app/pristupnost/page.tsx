@@ -33,14 +33,12 @@ export default function PristupnostPage() {
               <li>Některé vložené mapy třetích stran nesplňují plně požadavky WCAG 2.1 AA.</li>
             </ul>
 
-            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Zpětná vazba a kontakt</h2>
+            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Zpětná vazba</h2>
             <p>
-              Pokud narazíte na bariéru v přístupu k obsahu, kontaktujte nás:
+              Tento web je vizuální návrh v rámci volební kampaně, nikoli ostrý
+              provoz úřadu. Formální kanál pro hlášení bariér v přístupnosti zde
+              proto neuvádíme.
             </p>
-            <ul className="list-none space-y-1">
-              <li>E-mail: <a href="mailto:info@brodce.cloud" className="text-primary underline">info@brodce.cloud</a></li>
-            </ul>
-            <p>Na vaši zprávu odpovíme do 30 pracovních dnů.</p>
 
             <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Kontrolní mechanismus</h2>
             <p>

@@ -25,8 +25,8 @@ export default function GdprPage() {
             <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Provozovatel webu</h2>
             <p>
               Provozovatelem a správcem tohoto webu je volební uskupení{" "}
-              <strong>„Brodce – náš domov“</strong>. Web slouží jako prezentace
-              kandidátů a jejich vize moderního webu obce.
+              <strong>„Brodce – náš domov“</strong>. Web slouží jako vizuální
+              ukázka, jak by mohl vypadat moderní web městyse Brodce.
             </p>
             <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Jaké údaje zpracováváme</h2>
             <p>
@@ -41,11 +41,11 @@ export default function GdprPage() {
               obsahu jsou <strong>smyšlená a ilustrativní</strong>. Neodpovídají
               konkrétním žijícím osobám a slouží pouze k předvedení podoby webu.
             </p>
-            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Vaše práva a kontakt</h2>
+            <h2 className="font-serif text-xl font-bold text-stone-900 mt-6 mb-2">Vaše práva</h2>
             <p>
-              Pokud máte k tomuto webu dotaz nebo námitku, napište nám na{" "}
-              <a href="mailto:info@brodce.cloud" className="text-primary underline">info@brodce.cloud</a>.
-              V souvislosti se zpracováním osobních údajů máte právo podat stížnost
+              Web nezpracovává žádné osobní údaje návštěvníků, není proto vůči
+              čemu uplatňovat práva subjektu údajů. V obecné rovině máte
+              v souvislosti se zpracováním osobních údajů právo podat stížnost
               u Úřadu pro ochranu osobních údajů (uoou.cz).
             </p>
             <p className="text-xs text-stone-400 mt-8">
