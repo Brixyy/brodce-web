@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import {
   FileText, BookOpen, Download, CheckCircle2, Timer,
   Coins, Phone, Mail, Scale,
@@ -7,6 +6,7 @@ import {
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import FadeInView from "@/components/animations/FadeInView"
+import PersonAvatar from "@/components/ui/PersonAvatar"
 import { COUNCIL_MEMBERS, FINANCIAL_COMMITTEE, CONTROL_COMMITTEE } from "@/data/council"
 import { cn } from "@/lib/utils"
 
@@ -140,7 +140,7 @@ export default function ObecPage() {
                   )}>
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 text-[80px] font-serif font-bold select-none pointer-events-none text-white/5">B</div>
                     <div className="relative w-20 h-20 shrink-0 rounded-full overflow-hidden ring-4 ring-white/20">
-                      <Image src={member.photo ?? ""} alt={member.name} fill className="object-cover" />
+                      <PersonAvatar iconSize={38} tone={member.isMayor ? "dark" : "light"} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className={cn("text-[10px] uppercase tracking-widest font-medium mb-0.5", member.isMayor ? "text-white/60" : "text-stone-400")}>
@@ -173,7 +173,7 @@ export default function ObecPage() {
                   <FadeInView key={member.id} delay={160 + i * 50}>
                     <div className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all border border-stone-100 flex flex-col items-center text-center">
                       <div className="w-16 h-16 mb-3 rounded-full overflow-hidden ring-2 ring-stone-100">
-                        <Image src={member.photo ?? ""} alt={member.name} width={64} height={64} className="object-cover w-full h-full" />
+                        <PersonAvatar iconSize={30} />
                       </div>
                       <h3 className="font-semibold text-sm text-stone-900">{member.name}</h3>
                       <p className="text-xs text-stone-400 mt-0.5">{member.role}</p>

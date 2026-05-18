@@ -1,10 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ExternalLink, Phone, Mail, Clock, CreditCard, FileText, Landmark, AlertTriangle, Inbox, Globe } from "lucide-react"
 import SectionTitle from "@/components/ui/SectionTitle"
 import FadeInView from "@/components/animations/FadeInView"
+import PersonAvatar from "@/components/ui/PersonAvatar"
 import { OFFICE_STAFF } from "@/data/staff"
 import { MUNICIPALITY } from "@/data/municipality"
 import { cn } from "@/lib/utils"
@@ -114,19 +114,7 @@ export default function OfficeSection() {
                   {OFFICE_STAFF.map((staff) => (
                     <li key={staff.id} className="flex items-center gap-3 px-4 py-3">
                       <div className="w-9 h-9 shrink-0 rounded-full overflow-hidden ring-1 ring-white/10">
-                        {staff.photo ? (
-                          <Image
-                            src={staff.photo}
-                            alt={staff.name}
-                            width={36}
-                            height={36}
-                            className="object-cover w-full h-full"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-white/10 flex items-center justify-center text-white/40 text-xs font-bold">
-                            {staff.name.charAt(0)}
-                          </div>
-                        )}
+                        <PersonAvatar iconSize={18} tone="dark" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-white/90 leading-none truncate">{staff.name}</p>

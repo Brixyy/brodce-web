@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import {
   Phone, Mail, Clock, CreditCard, FileText, Landmark,
@@ -10,6 +9,7 @@ import {
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import FadeInView from "@/components/animations/FadeInView"
+import PersonAvatar from "@/components/ui/PersonAvatar"
 import { OFFICE_STAFF } from "@/data/staff"
 import { MUNICIPALITY } from "@/data/municipality"
 import { UREDNI_DESKA } from "@/data/uredni-deska"
@@ -154,19 +154,7 @@ export default function UradPage() {
                   <div className="bg-white rounded-2xl p-5 shadow-sm border border-stone-100 flex flex-col">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-stone-100 shrink-0">
-                        {staff.photo ? (
-                          <Image
-                            src={staff.photo}
-                            alt={staff.name}
-                            width={48}
-                            height={48}
-                            className="object-cover w-full h-full"
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
-                            {staff.name.charAt(0)}
-                          </div>
-                        )}
+                        <PersonAvatar iconSize={24} />
                       </div>
                       <div className="min-w-0">
                         <p className="font-semibold text-stone-900 text-sm leading-tight truncate">{staff.name}</p>

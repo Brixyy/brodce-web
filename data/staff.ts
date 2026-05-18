@@ -5,7 +5,6 @@ export type StaffMember = {
   agenda: string
   phone?: string
   email?: string
-  photo?: string
 }
 
 export const OFFICE_STAFF: StaffMember[] = [
@@ -16,7 +15,6 @@ export const OFFICE_STAFF: StaffMember[] = [
     agenda: "Vedení úřadu, reprezentace obce, investiční akce",
     phone: "+420 326 000 101",
     email: "starosta@brodce.cloud",
-    photo: "https://randomuser.me/api/portraits/women/65.jpg",
   },
   {
     id: "2",
@@ -24,7 +22,6 @@ export const OFFICE_STAFF: StaffMember[] = [
     role: "Místostarosta",
     agenda: "Zastupování starostky, technická správa obce",
     email: "mistostarosta@brodce.cloud",
-    photo: "https://randomuser.me/api/portraits/men/42.jpg",
   },
   {
     id: "3",
@@ -33,7 +30,6 @@ export const OFFICE_STAFF: StaffMember[] = [
     agenda: "Matrika, Czech POINT, podatelna, evidence obyvatel",
     phone: "+420 326 000 100",
     email: "podatelna@brodce.cloud",
-    photo: "https://randomuser.me/api/portraits/women/31.jpg",
   },
   {
     id: "4",
@@ -42,6 +38,5 @@ export const OFFICE_STAFF: StaffMember[] = [
     agenda: "Zastupující matrikářka, podatelna, pokladna",
     phone: "+420 326 000 100",
     email: "podatelna@brodce.cloud",
-    photo: "https://randomuser.me/api/portraits/women/47.jpg",
   },
 ]

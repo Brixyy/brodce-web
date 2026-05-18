@@ -42,7 +42,6 @@ export type CouncilMember = {
   role: string
   email?: string
   phone?: string
-  photo?: string
   isMayor?: boolean
   isDeputy?: boolean
   committee?: "financni" | "kontrolni"

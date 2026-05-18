@@ -1,9 +1,9 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Mail, Phone, ChevronRight } from "lucide-react"
 import SectionTitle from "@/components/ui/SectionTitle"
 import FadeInView from "@/components/animations/FadeInView"
 import BackgroundAurora from "@/components/ui/BackgroundAurora"
+import PersonAvatar from "@/components/ui/PersonAvatar"
 import { COUNCIL_MEMBERS, FINANCIAL_COMMITTEE, CONTROL_COMMITTEE } from "@/data/council"
 import { cn } from "@/lib/utils"
 
@@ -62,12 +62,7 @@ export default function CouncilSection() {
                 </div>
 
                 <div className="relative w-20 h-20 shrink-0 rounded-full overflow-hidden ring-4 ring-white/20">
-                  <Image
-                    src={member.photo ?? "https://randomuser.me/api/portraits/lego/1.jpg"}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
+                  <PersonAvatar iconSize={38} tone={member.isMayor ? "dark" : "light"} />
                 </div>
 
                 <div className="flex-1 min-w-0">
@@ -127,13 +122,7 @@ export default function CouncilSection() {
               <FadeInView key={member.id} delay={160 + i * 50}>
                 <div className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all group border border-stone-100 flex flex-col items-center text-center">
                   <div className="w-16 h-16 mb-3 rounded-full overflow-hidden ring-2 ring-stone-100 group-hover:ring-primary/30 transition-colors">
-                    <Image
-                      src={member.photo ?? "https://randomuser.me/api/portraits/lego/1.jpg"}
-                      alt={member.name}
-                      width={64}
-                      height={64}
-                      className="object-cover w-full h-full"
-                    />
+                    <PersonAvatar iconSize={30} />
                   </div>
                   <h3 className="font-semibold text-sm text-stone-900 leading-snug">{member.name}</h3>
                   <p className="text-xs text-stone-400 mt-0.5">{member.role}</p>
