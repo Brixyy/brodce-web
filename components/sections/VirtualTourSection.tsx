@@ -9,7 +9,7 @@ import BackgroundAurora from "@/components/ui/BackgroundAurora"
 
 const TOUR_URL = "https://brodce.cz/html/prohlidka/"
 const PREVIEW_IMAGE =
-  "https://images.unsplash.com/photo-1664051947339-daa1c7ba0067?auto=format&fit=crop&q=80&w=1600"
+  "https://www.brodce.cz/assets/Image.ashx?id_org=1268&id_obrazky=15034&sizeForce=0"
 
 export default function VirtualTourSection() {
   const [active, setActive] = useState(false)
