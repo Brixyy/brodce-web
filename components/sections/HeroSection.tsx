@@ -54,6 +54,11 @@ export default function HeroSection() {
   // se nikdy neobjeví — po timeoutu skryjeme iframe a zůstane statický letecký
   // záběr (poster).
   useEffect(() => {
+    // ?hero=static vynutí statickou variantu (náhled fallbacku bez čekání na výpadek)
+    if (new URLSearchParams(window.location.search).get("hero") === "static") {
+      setTourFailed(true)
+      return
+    }
     let elapsed = 0
     const id = setInterval(() => {
       elapsed += 1000
@@ -122,20 +127,22 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover"
         />
-        <iframe
-          ref={iframeRef}
-          src={TOUR_URL}
-          title="Virtuální prohlídka Brodce 360°"
-          className="absolute left-0 top-0 w-full border-0"
-          allow="accelerometer; gyroscope; fullscreen; xr-spatial-tracking"
-          style={{
-            pointerEvents: tourActive ? "auto" : "none",
-            // schová spodní krpano thumbnail lištu — padne pod viewport (parent má overflow-hidden)
-            height: "calc(100% + 140px)",
-            // při selhání prohlídky zůstane viditelný jen poster pod iframem
-            display: tourFailed ? "none" : "block",
-          }}
-        />
+        {/* Při selhání prohlídky iframe úplně odpojíme — nejen schováme — aby
+            nevisel na neúspěšném požadavku na brodce.cz. Zůstane jen poster. */}
+        {!tourFailed && (
+          <iframe
+            ref={iframeRef}
+            src={TOUR_URL}
+            title="Virtuální prohlídka Brodce 360°"
+            className="absolute left-0 top-0 w-full border-0"
+            allow="accelerometer; gyroscope; fullscreen; xr-spatial-tracking"
+            style={{
+              pointerEvents: tourActive ? "auto" : "none",
+              // schová spodní krpano thumbnail lištu — padne pod viewport (parent má overflow-hidden)
+              height: "calc(100% + 140px)",
+            }}
+          />
+        )}
       </div>
 
       {/* Activation overlay — když !tourActive, klik aktivuje prohlídku */}
