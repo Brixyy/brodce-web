@@ -111,8 +111,8 @@ export default function OObciPage() {
               <FadeInView direction="left">
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                   <Image
-                    src="/images/gallery/jizera.jpg"
-                    alt="Příroda v okolí Brodce"
+                    src="https://images.unsplash.com/photo-1753296104075-075d666430a4?auto=format&fit=crop&q=80&w=1600"
+                    alt="Řeka za úsvitu se stromy na březích"
                     fill className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
@@ -251,8 +251,8 @@ export default function OObciPage() {
                 <div className="group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:shadow-md transition-all flex flex-col h-full">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src="/images/gallery/skola.jpg"
-                      alt="Masarykova základní škola Brodce"
+                      src="https://images.unsplash.com/photo-1675582951163-007490d82001?auto=format&fit=crop&q=80&w=1200"
+                      alt="Budova základní školy z červených cihel"
                       fill className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
@@ -288,8 +288,8 @@ export default function OObciPage() {
                 <div className="group bg-white rounded-3xl overflow-hidden border border-stone-100 hover:shadow-md transition-all flex flex-col h-full">
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src="/images/hero/skola.jpg"
-                      alt="Mateřská škola Brodce"
+                      src="https://images.unsplash.com/photo-1666351406275-64733d7b4033?auto=format&fit=crop&q=80&w=1200"
+                      alt="Historická budova venkovské školy"
                       fill className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
