@@ -27,7 +27,7 @@ export default function CouncilSection() {
           <div>
             <SectionTitle
               title="Zastupitelstvo"
-              subtitle="9 zastupitelů zvolených na období 2022–2026"
+              subtitle="9 zastupitelů zvolených na období 2026–2030"
             />
           </div>
           <Link

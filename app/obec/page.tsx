@@ -125,7 +125,7 @@ export default function ObecPage() {
               <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
                 <div>
                   <h2 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Zastupitelstvo</h2>
-                  <p className="mt-2 text-stone-500">9 zastupitelů zvolených na volební období 2022–2026</p>
+                  <p className="mt-2 text-stone-500">9 zastupitelů zvolených na volební období 2026–2030</p>
                 </div>
               </div>
             </FadeInView>
