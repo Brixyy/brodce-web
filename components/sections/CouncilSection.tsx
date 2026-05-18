@@ -119,8 +119,8 @@ export default function CouncilSection() {
           {others.map((member, i) => {
             const badge = member.committee ? COMMITTEE_LABELS[member.committee] : null
             return (
-              <FadeInView key={member.id} delay={160 + i * 50}>
-                <div className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all group border border-stone-100 flex flex-col items-center text-center">
+              <FadeInView key={member.id} delay={160 + i * 50} className="h-full">
+                <div className="h-full bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all group border border-stone-100 flex flex-col items-center text-center">
                   <div className="w-16 h-16 mb-3 rounded-full overflow-hidden ring-2 ring-stone-100 group-hover:ring-primary/30 transition-colors">
                     <PersonAvatar iconSize={30} />
                   </div>
