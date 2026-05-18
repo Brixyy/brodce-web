@@ -6,8 +6,13 @@
 
 ## Přehled projektu
 
-Oficiální web **městyse Brodce** (Pojizeří, okres Mladá Boleslav).
-Statický prezentační web s aktualitami, úřední deskou, akcemi, galerií a kontakty pro občany.
+**Neoficiální kampaňový web** volebního uskupení „Brodce – náš domov“, které kandiduje
+do zastupitelstva městyse Brodce (Pojizeří, okres Mladá Boleslav). Slouží jako vizuální
+ukázka, jak by mohl vypadat modernizovaný web obce.
+
+⚠️ **Není to oficiální web úřadu** a nesmí se za něj vydávat. Oficiální web obce je
+www.brodce.cz. Jména osob, IČO, datová schránka a kontakty na webu musí být smyšlené
+a ilustrativní (e-maily na `@brodce.cloud`). Nepřebírej obsah ani obrázky z brodce.cz.
 
 ## Tech stack
 
