@@ -41,10 +41,31 @@ export default function HeroSection() {
   const [hour, setHour] = useState(0)
   const [tourActive, setTourActive] = useState(false)
   const [currentScene, setCurrentScene] = useState(HOME_SCENE)
+  const [tourFailed, setTourFailed] = useState(false)
   const iframeRef = useRef<HTMLIFrameElement>(null)
 
   useEffect(() => {
     setHour(new Date().getHours())
+  }, [])
+
+  // Fallback: krpano prohlídka se loaduje z brodce.cz. Pravidelně kontrolujeme,
+  // jestli se krpano v iframu inicializovalo (iframe je same-origin). Když ho
+  // brodce.cz odstřihne (404, zablokovaný hotlink, výpadek serveru), krpano_get
+  // se nikdy neobjeví — po timeoutu skryjeme iframe a zůstane statický letecký
+  // záběr (poster).
+  useEffect(() => {
+    let elapsed = 0
+    const id = setInterval(() => {
+      elapsed += 1000
+      const w = iframeRef.current?.contentWindow as KrpanoWindow | null
+      if (typeof w?.krpano_get === "function") {
+        clearInterval(id)
+      } else if (elapsed >= 15000) {
+        clearInterval(id)
+        setTourFailed(true)
+      }
+    }, 1000)
+    return () => clearInterval(id)
   }, [])
 
   // ESC deaktivuje tour interakci
@@ -111,12 +132,14 @@ export default function HeroSection() {
             pointerEvents: tourActive ? "auto" : "none",
             // schová spodní krpano thumbnail lištu — padne pod viewport (parent má overflow-hidden)
             height: "calc(100% + 140px)",
+            // při selhání prohlídky zůstane viditelný jen poster pod iframem
+            display: tourFailed ? "none" : "block",
           }}
         />
       </div>
 
       {/* Activation overlay — když !tourActive, klik aktivuje prohlídku */}
-      {!tourActive && (
+      {!tourActive && !tourFailed && (
         <button
           type="button"
           onClick={() => setTourActive(true)}
@@ -132,7 +155,7 @@ export default function HeroSection() {
       )}
 
       {/* Tour controls — pravý horní roh, když tourActive */}
-      {tourActive && (
+      {tourActive && !tourFailed && (
         <div className="absolute top-24 right-6 sm:right-10 z-[20] flex items-center gap-2">
           {currentScene !== HOME_SCENE && (
             <button
@@ -264,7 +287,7 @@ export default function HeroSection() {
       </div>
 
       {/* Tour instruction — zobrazuje se jen když je tour aktivní */}
-      {tourActive && (
+      {tourActive && !tourFailed && (
         <div
           className="absolute bottom-10 left-6 sm:left-10 z-10 hidden md:flex items-center gap-2 text-white/70 text-xs pointer-events-none animate-fade-in-up"
         >
